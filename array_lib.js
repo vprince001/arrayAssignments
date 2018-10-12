@@ -44,7 +44,20 @@ const reverseArray = function(inputArray){
   return reversedArray;
 }
 
+const extractAlternateElements = function(inputArray){
+  let filteredArray = [];
+  let filteredArrayIndex = 0;
+
+  for(index = 0; index < inputArray.length; index++){
+    filteredArray[filteredArrayIndex] = inputArray[index];
+    filteredArrayIndex++;
+    index++;
+  }
+  return filteredArray;
+}
+
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
 exports.reverseArray = reverseArray;
+exports.extractAlternateElements = extractAlternateElements;
