@@ -57,20 +57,16 @@ const extractAlternateElements = function(inputArray){
 }
 
 const reverseFibo = function(limit){
-  let sum = 0;
   let firstTerm = 0;
   let secondTerm = 1;
-  let fibo = [0,1];
+  let sum = firstTerm + secondTerm;
+  let fibo = [firstTerm];
 
-  if(limit == 1){
-    fibo = [0];
-  }
-
-  for(let term = 2; term < limit; term++){
+  for(let term = 1; term < limit; term++){
+    fibo[term] = sum;
     sum = firstTerm+secondTerm;
     firstTerm = secondTerm;
     secondTerm = sum;
-    fibo[term] = sum;
   }
   return reverseArray(fibo);
 }
@@ -86,6 +82,17 @@ const findGreatest = function(inputArray){
   return greatestNumber;
 }
 
+const findLowest = function(inputArray){
+  let lowestNumber = inputArray[0];
+
+  for(let index = 1; index < inputArray.length; index++){
+    if(inputArray[index] < lowestNumber){
+      lowestNumber = inputArray[index];
+    }
+  }
+  return lowestNumber;
+}
+
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
@@ -93,3 +100,4 @@ exports.reverseArray = reverseArray;
 exports.extractAlternateElements = extractAlternateElements;
 exports.reverseFibo = reverseFibo;
 exports.findGreatest = findGreatest;
+exports.findLowest = findLowest;
