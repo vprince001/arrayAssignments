@@ -107,6 +107,10 @@ const mapLengths = function(inputArray){
   return mappedArray;
 }
 
+const countOdds = function(inputArray){
+  return extractOdds(inputArray).length;
+}
+
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
@@ -117,3 +121,4 @@ exports.findGreatest = findGreatest;
 exports.findLowest = findLowest;
 exports.calcAverage = calcAverage;
 exports.mapLengths = mapLengths;
+exports.countOdds = countOdds;
