@@ -33,6 +33,18 @@ const sumAllElements = function(inputArray){
   return sum;
 }
 
+const reverseArray = function(inputArray){
+  let reversedArray = [];
+  let reversedArrayIndex = (inputArray.length) - 1;
+
+  for(index in inputArray){
+    reversedArray[reversedArrayIndex] = inputArray[index];
+    reversedArrayIndex--;
+  }
+  return reversedArray;
+}
+
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
+exports.reverseArray = reverseArray;
