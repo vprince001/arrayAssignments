@@ -93,6 +93,12 @@ const findLowest = function(inputArray){
   return lowestNumber;
 }
 
+const calcAverage = function(inputArray){
+  let numberOfElements = inputArray.length;
+  let average = sumAllElements(inputArray)/numberOfElements;
+  return average.toFixed(2);
+}
+
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
@@ -101,3 +107,4 @@ exports.extractAlternateElements = extractAlternateElements;
 exports.reverseFibo = reverseFibo;
 exports.findGreatest = findGreatest;
 exports.findLowest = findLowest;
+exports.calcAverage = calcAverage;
