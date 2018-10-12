@@ -75,9 +75,21 @@ const reverseFibo = function(limit){
   return reverseArray(fibo);
 }
 
+const findGreatest = function(inputArray){
+  let greatestNumber = inputArray[0];
+
+  for(let index = 1; index < inputArray.length; index++){
+    if(inputArray[index] > greatestNumber){
+      greatestNumber = inputArray[index];
+    }
+  }
+  return greatestNumber;
+}
+
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
 exports.reverseArray = reverseArray;
 exports.extractAlternateElements = extractAlternateElements;
 exports.reverseFibo = reverseFibo;
+exports.findGreatest = findGreatest;
