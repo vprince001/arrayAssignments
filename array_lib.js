@@ -99,6 +99,14 @@ const calcAverage = function(inputArray){
   return average.toFixed(2);
 }
 
+const mapLengths = function(inputArray){
+  let mappedArray = [];
+  for(index in inputArray){
+    mappedArray[index] = inputArray[index].length;
+  }
+  return mappedArray;
+}
+
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
@@ -108,3 +116,4 @@ exports.reverseFibo = reverseFibo;
 exports.findGreatest = findGreatest;
 exports.findLowest = findLowest;
 exports.calcAverage = calcAverage;
+exports.mapLengths = mapLengths;
