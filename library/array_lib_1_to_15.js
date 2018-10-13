@@ -111,6 +111,20 @@ const countOdds = function(inputArray){
   return extractOdds(inputArray).length;
 }
 
+const countEvens = function(inputArray){
+  return extractEvens(inputArray).length;
+}
+
+const countNumbersAbove = function(inputArray,threshold){
+  let count = 0;
+  for(let index in inputArray){
+    if(inputArray[index] > threshold){
+      count++;
+    }
+  }
+  return count;
+}
+
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
@@ -122,3 +136,5 @@ exports.findLowest = findLowest;
 exports.calcAverage = calcAverage;
 exports.mapLengths = mapLengths;
 exports.countOdds = countOdds;
+exports.countEvens = countEvens;
+exports.countNumbersAbove = countNumbersAbove;

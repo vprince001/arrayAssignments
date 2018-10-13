@@ -1,5 +1,5 @@
 const assert = require("assert");
-const extractEvens = require("./array_lib.js").extractEvens;
+const extractEvens = require("../library/array_lib_1_to_15.js").extractEvens;
 
 assert.deepEqual(extractEvens([2]),[2]);
 assert.deepEqual(extractEvens([1,2,3]),[2]);

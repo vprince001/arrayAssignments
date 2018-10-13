@@ -1,5 +1,5 @@
 const assert = require("assert");
-const findGreatest = require("./array_lib.js").findGreatest;
+const findGreatest = require("../library/array_lib_1_to_15.js").findGreatest;
 
 assert.equal(findGreatest([2]),2);
 assert.equal(findGreatest([1,2,3]),3);
