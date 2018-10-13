@@ -27,6 +27,13 @@ const checkDescendingOrder = function(inputArray){
   return true;
 }
 
+const extractDigits = function(number){
+  numberString = number.toString();
+  numbers = numberString.split('');
+  return numbers;
+}
+
 exports.findIndex = findIndex;
 exports.checkAscendingOrder = checkAscendingOrder;
 exports.checkDescendingOrder = checkDescendingOrder;
+exports.extractDigits = extractDigits;
