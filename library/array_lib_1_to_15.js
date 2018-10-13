@@ -125,6 +125,16 @@ const countNumbersAbove = function(inputArray,threshold){
   return count;
 }
 
+const countNumbersBelow = function(inputArray,threshold){
+  let count = 0;
+  for(let index in inputArray){
+    if(inputArray[index] < threshold){
+      count++;
+    }
+  }
+  return count;
+}
+
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
@@ -138,3 +148,4 @@ exports.mapLengths = mapLengths;
 exports.countOdds = countOdds;
 exports.countEvens = countEvens;
 exports.countNumbersAbove = countNumbersAbove;
+exports.countNumbersBelow = countNumbersBelow;
