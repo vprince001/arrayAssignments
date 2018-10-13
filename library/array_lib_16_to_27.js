@@ -11,7 +11,16 @@ const findIndex = function(inputArray,number){
 
 const checkAscendingOrder = function(inputArray){
   for(let index = 0; index < inputArray.length; index++){
-    if(inputArray[index]>inputArray[index+1]){
+    if(inputArray[index] > inputArray[index+1]){
+      return false;
+    }
+  }
+  return true;
+}
+
+const checkDescendingOrder = function(inputArray){
+  for(let index = 0; index < inputArray.length; index++){
+    if(inputArray[index] < inputArray[index+1]){
       return false;
     }
   }
@@ -20,3 +29,4 @@ const checkAscendingOrder = function(inputArray){
 
 exports.findIndex = findIndex;
 exports.checkAscendingOrder = checkAscendingOrder;
+exports.checkDescendingOrder = checkDescendingOrder;
