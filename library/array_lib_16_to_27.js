@@ -110,6 +110,20 @@ const zipTwoArrays = function(firstArray, secondArray) {
   return zippedArray;
 }
 
+const rotateArray = function(inputArray, startingIndex) {
+  let rotatedArray = [];
+  let count = 0;
+  for (let index = startingIndex; index < inputArray.length; index++) {
+    rotatedArray[count] = inputArray[index];
+    count++;
+  }
+  for (let index = 0; index < startingIndex; index++) {
+    rotatedArray[count] = inputArray[index];
+    count++;
+  }
+  return rotatedArray;
+}
+
 exports.findIndex = findIndex;
 exports.checkAscendingOrder = checkAscendingOrder;
 exports.checkDescendingOrder = checkDescendingOrder;
@@ -119,3 +133,4 @@ exports.unionArrays = unionArrays;
 exports.giveIntersections = giveIntersections;
 exports.isArraySubset = isArraySubset;
 exports.zipTwoArrays = zipTwoArrays;
+exports.rotateArray = rotateArray;
