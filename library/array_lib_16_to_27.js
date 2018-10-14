@@ -70,16 +70,30 @@ const giveIntersections = function(firstArray,secondArray){
   return intersectedArray;
 }
 
-const extractUniqueFromFirst = function(firstArray, secondArray) {
+const extractUniqueFromFirst = function(firstArray, secondArray){
   let uniqueArray = [];
   let count = 0;
-  for (let index in firstArray) {
-    if (!isElementExist(secondArray, firstArray[index])) {
+  for (let index in firstArray){
+    if (!isElementExist(secondArray, firstArray[index])){
       uniqueArray[count] = firstArray[index];
       count++;
     }
   }
   return uniqueArray;
+}
+
+const isArraySubset = function(firstArray, secondArray){
+  let sameElements = 0;
+  let isSubset = false;
+  for (let index in secondArray){
+    if (isElementExist(firstArray, secondArray[index])){
+      sameElements++;
+    }
+  }
+  if (sameElements == secondArray.length){
+    isSubset = true;
+  }
+  return isSubset;
 }
 
 exports.findIndex = findIndex;
@@ -89,4 +103,4 @@ exports.extractDigits = extractDigits;
 exports.removeDuplicates = removeDuplicates;
 exports.unionArrays = unionArrays;
 exports.giveIntersections = giveIntersections;
-exports.extractUniqueFromFirst = extractUniqueFromFirst;
+exports.isArraySubset = isArraySubset;
