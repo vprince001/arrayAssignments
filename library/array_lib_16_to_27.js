@@ -54,15 +54,20 @@ const removeDuplicates = function(inputArray){
 }
 
 const unionArrays = function(firstArray, secondArray){
-  let unionArray = removeDuplicates(firstArray).slice();
-  let nextArray = removeDuplicates(secondArray).slice();
-  let unionIndex = unionArray.length;
+  return unionArray = removeDuplicates(firstArray.concat(secondArray));
+}
 
-  for(let index = 0; index < nextArray.length; index++){
-    unionArray[unionIndex] = nextArray[index];
-    unionIndex++;
+const giveIntersections = function(firstArray,secondArray){
+  let firstUnique = removeDuplicates(firstArray);
+  let secondUnique = removeDuplicates(secondArray);
+  let intersectedArray = [];
+  
+  for(index in firstArray){
+    if(isElementExist(secondUnique, firstUnique[index])){
+      intersectedArray.push(firstUnique[index])
+    }
   }
-  return unionArray;
+  return intersectedArray;
 }
 
 exports.findIndex = findIndex;
@@ -71,3 +76,4 @@ exports.checkDescendingOrder = checkDescendingOrder;
 exports.extractDigits = extractDigits;
 exports.removeDuplicates = removeDuplicates;
 exports.unionArrays = unionArrays;
+exports.giveIntersections = giveIntersections;
