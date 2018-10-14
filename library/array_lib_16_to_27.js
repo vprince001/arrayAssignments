@@ -96,6 +96,20 @@ const isArraySubset = function(firstArray, secondArray){
   return isSubset;
 }
 
+const zipTwoArrays = function(firstArray, secondArray) {
+  let zippedArray = [];
+  let length = firstArray.length;
+  if(secondArray.length < firstArray.length){
+    length = secondArray.length;
+  }
+  for (let index = 0; index < length; index++) {
+    zippedArray[index] = [];
+    zippedArray[index][0] = firstArray[index];
+    zippedArray[index][1] = secondArray[index];
+  }
+  return zippedArray;
+}
+
 exports.findIndex = findIndex;
 exports.checkAscendingOrder = checkAscendingOrder;
 exports.checkDescendingOrder = checkDescendingOrder;
@@ -104,3 +118,4 @@ exports.removeDuplicates = removeDuplicates;
 exports.unionArrays = unionArrays;
 exports.giveIntersections = giveIntersections;
 exports.isArraySubset = isArraySubset;
+exports.zipTwoArrays = zipTwoArrays;
