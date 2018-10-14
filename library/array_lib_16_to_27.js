@@ -28,12 +28,33 @@ const checkDescendingOrder = function(inputArray){
 }
 
 const extractDigits = function(number){
-  numberString = number.toString();
-  numbers = numberString.split('');
+  let numberString = number.toString();
+  let numbers = numberString.split('');
   return numbers;
+}
+
+const isElementExist = function(uniqueArray, element){
+  let status = false;
+  for(let index in uniqueArray){
+    if(uniqueArray[index] == element){
+      status = true;
+    }
+  }
+  return status;
+}
+
+const removeDuplicates = function(inputArray){
+  let uniqueArray = [];
+  for (let index in inputArray){
+      if(!isElementExist(uniqueArray, inputArray[index])){
+        uniqueArray.push(inputArray[index]);
+      }
+  }
+  return uniqueArray;
 }
 
 exports.findIndex = findIndex;
 exports.checkAscendingOrder = checkAscendingOrder;
 exports.checkDescendingOrder = checkDescendingOrder;
 exports.extractDigits = extractDigits;
+exports.removeDuplicates = removeDuplicates;
