@@ -70,6 +70,18 @@ const giveIntersections = function(firstArray,secondArray){
   return intersectedArray;
 }
 
+const extractUniqueFromFirst = function(firstArray, secondArray) {
+  let uniqueArray = [];
+  let count = 0;
+  for (let index in firstArray) {
+    if (!isElementExist(secondArray, firstArray[index])) {
+      uniqueArray[count] = firstArray[index];
+      count++;
+    }
+  }
+  return uniqueArray;
+}
+
 exports.findIndex = findIndex;
 exports.checkAscendingOrder = checkAscendingOrder;
 exports.checkDescendingOrder = checkDescendingOrder;
@@ -77,3 +89,4 @@ exports.extractDigits = extractDigits;
 exports.removeDuplicates = removeDuplicates;
 exports.unionArrays = unionArrays;
 exports.giveIntersections = giveIntersections;
+exports.extractUniqueFromFirst = extractUniqueFromFirst;
