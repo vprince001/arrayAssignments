@@ -195,6 +195,7 @@ exports.extractDigits = extractDigits;
 exports.removeDuplicates = removeDuplicates;
 exports.unionArrays = unionArrays;
 exports.giveIntersections = giveIntersections;
+exports.extractUniqueFromFirst = extractUniqueFromFirst;
 exports.isArraySubset = isArraySubset;
 exports.zipTwoArrays = zipTwoArrays;
 exports.rotateArray = rotateArray;
