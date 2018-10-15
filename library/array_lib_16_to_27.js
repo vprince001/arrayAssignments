@@ -124,6 +124,37 @@ const rotateArray = function(inputArray, startingIndex) {
   return rotatedArray;
 }
 
+const swapElements = function(inputArray, index) {
+  if(inputArray[index] > inputArray[index+1]){
+    let greaterValue = inputArray[index];
+    inputArray[index] = inputArray[index+1];
+    inputArray[index+1] = greaterValue;
+  }
+}
+
+const sortInAscending = function(inputArray) {
+  for(iteration = 0; iteration < inputArray.length; iteration++){
+    for(let index = 0; index < inputArray.length; index++) {
+      swapElements(inputArray,index)
+    }
+  }
+  return inputArray;
+}
+
+const partitionArray = function(inputArray, selectedValue) {
+  let partitionedArray = [[], []];
+  sortInAscending(inputArray);
+
+  for(let index in inputArray) {
+    partitionedArray[1].push(inputArray[index]);
+    if(selectedValue >= inputArray[index]) {
+      partitionedArray[0].push(inputArray[index]);
+      partitionedArray[1].pop();
+    }
+  }
+  return partitionedArray;
+}
+
 exports.findIndex = findIndex;
 exports.checkAscendingOrder = checkAscendingOrder;
 exports.checkDescendingOrder = checkDescendingOrder;
@@ -134,3 +165,5 @@ exports.giveIntersections = giveIntersections;
 exports.isArraySubset = isArraySubset;
 exports.zipTwoArrays = zipTwoArrays;
 exports.rotateArray = rotateArray;
+exports.sortInAscending = sortInAscending;
+exports.partitionArray = partitionArray;
