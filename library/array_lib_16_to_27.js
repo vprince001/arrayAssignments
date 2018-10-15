@@ -1,5 +1,8 @@
+//importing function from other library
 const findLowest = require("./array_lib_1_to_15").findLowest;
 
+//this function will return the index 
+//of a given number from a given array
 const findIndex = function(inputArray,number){
   for(let index in inputArray){
     if(inputArray[index] == number){
@@ -9,6 +12,8 @@ const findIndex = function(inputArray,number){
   return "no match found"
 }
 
+//this function will check whether a given array
+//is ascending or not
 const checkAscendingOrder = function(inputArray){
   for(let index = 0; index < inputArray.length; index++){
     if(inputArray[index] > inputArray[index+1]){
@@ -18,6 +23,8 @@ const checkAscendingOrder = function(inputArray){
   return true;
 }
 
+//this function will check whether a given array
+//is descending or not
 const checkDescendingOrder = function(inputArray){
   for(let index = 0; index < inputArray.length; index++){
     if(inputArray[index] < inputArray[index+1]){
@@ -27,12 +34,16 @@ const checkDescendingOrder = function(inputArray){
   return true;
 }
 
+//this function will seperate all digits 
+//of a given number with a comma and return an array
 const extractDigits = function(number){
   let numberString = number.toString();
   let numbers = numberString.split('');
   return numbers;
 }
 
+//this function will check whether an element
+//exists in a given array or not
 const isElementExist = function(uniqueArray, element){
   let status = false;
   for(let index in uniqueArray){
@@ -43,6 +54,8 @@ const isElementExist = function(uniqueArray, element){
   return status;
 }
 
+//this function will remove all duplicate elements 
+//from a given array and return an array of all unique elements
 const removeDuplicates = function(inputArray){
   let uniqueArray = [];
   for (let index in inputArray){
@@ -53,10 +66,14 @@ const removeDuplicates = function(inputArray){
   return uniqueArray;
 }
 
+//this function will concatinate two given arrays 
+//and return a single concatinated array
 const unionArrays = function(firstArray, secondArray){
   return unionArray = removeDuplicates(firstArray.concat(secondArray));
 }
 
+//this function will take two array as arguments, remove duplicates and 
+//return an array of all matching elements from the two arrays
 const giveIntersections = function(firstArray,secondArray){
   let firstUnique = removeDuplicates(firstArray);
   let secondUnique = removeDuplicates(secondArray);
@@ -70,6 +87,8 @@ const giveIntersections = function(firstArray,secondArray){
   return intersectedArray;
 }
 
+//this function will compare two given arrays 
+//and return all the unique elements from the first array 
 const extractUniqueFromFirst = function(firstArray, secondArray){
   let uniqueArray = [];
   let count = 0;
@@ -82,6 +101,8 @@ const extractUniqueFromFirst = function(firstArray, secondArray){
   return uniqueArray;
 }
 
+//this function will take two array as arguments 
+//and check whecther second array is a subset of first array of not
 const isArraySubset = function(firstArray, secondArray){
   let sameElements = 0;
   let isSubset = false;
@@ -96,6 +117,8 @@ const isArraySubset = function(firstArray, secondArray){
   return isSubset;
 }
 
+//this function will return a zip
+//from two given arrays
 const zipTwoArrays = function(firstArray, secondArray) {
   let zippedArray = [];
   let length = firstArray.length;
@@ -110,28 +133,35 @@ const zipTwoArrays = function(firstArray, secondArray) {
   return zippedArray;
 }
 
-const rotateArray = function(inputArray, startingIndex) {
+//this function will retun an array 
+//rotated from a given number from a given array
+const rotateArray = function(inputArray, firstMatch) {
   let rotatedArray = [];
   let count = 0;
-  for (let index = startingIndex; index < inputArray.length; index++) {
+  for (let index = firstMatch; index < inputArray.length; index++) {
     rotatedArray[count] = inputArray[index];
     count++;
   }
-  for (let index = 0; index < startingIndex; index++) {
+  for (let index = 0; index < firstMatch; index++) {
     rotatedArray[count] = inputArray[index];
     count++;
   }
   return rotatedArray;
 }
 
+//this function will swap number of given 
+//index to the end of all smaller numbers from a given array
 const swapElements = function(inputArray, index) {
   if(inputArray[index] > inputArray[index+1]){
     let greaterValue = inputArray[index];
     inputArray[index] = inputArray[index+1];
     inputArray[index+1] = greaterValue;
   }
+  return inputArray;
 }
 
+//this function will sort a given 
+//array in ascending order
 const sortInAscending = function(inputArray) {
   for(iteration = 0; iteration < inputArray.length; iteration++){
     for(let index = 0; index < inputArray.length; index++) {
@@ -141,6 +171,8 @@ const sortInAscending = function(inputArray) {
   return inputArray;
 }
 
+//this function will return an array 
+//after dividing a given array in two arrays from the selected value
 const partitionArray = function(inputArray, selectedValue) {
   let partitionedArray = [[], []];
   sortInAscending(inputArray);
@@ -155,6 +187,7 @@ const partitionArray = function(inputArray, selectedValue) {
   return partitionedArray;
 }
 
+//exporting all functions
 exports.findIndex = findIndex;
 exports.checkAscendingOrder = checkAscendingOrder;
 exports.checkDescendingOrder = checkDescendingOrder;
