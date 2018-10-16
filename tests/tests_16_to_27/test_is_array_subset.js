@@ -1,5 +1,5 @@
 const assert = require("assert");
-const isArraySubset = require("../library/array_lib_16_to_27.js").isArraySubset;
+const isArraySubset = require("../../library/array_lib_16_to_27.js").isArraySubset;
 
 assert.deepEqual(isArraySubset([2],[2]),true);
 assert.deepEqual(isArraySubset([2,1],[1]),true);

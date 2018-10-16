@@ -1,5 +1,5 @@
 const assert = require("assert");
-const mapLengths = require("../library/array_lib_1_to_15.js").mapLengths;
+const mapLengths = require("../../library/array_lib_1_to_15.js").mapLengths;
 
 assert.deepEqual(mapLengths(['An']), [2]);
 assert.deepEqual(mapLengths(['An','apple','a','day']), [2,5,1,3]);

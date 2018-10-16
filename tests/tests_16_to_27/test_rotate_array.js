@@ -1,5 +1,5 @@
 const assert = require("assert");
-const rotateArray = require("../library/array_lib_16_to_27.js").rotateArray;
+const rotateArray = require("../../library/array_lib_16_to_27.js").rotateArray;
 
 assert.deepEqual(rotateArray([1,2],1),[2,1]);
 assert.deepEqual(rotateArray([1,2,3,4,5],2),[3,4,5,1,2]);

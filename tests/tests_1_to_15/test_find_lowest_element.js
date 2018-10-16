@@ -1,5 +1,5 @@
 const assert = require("assert");
-const findLowest = require("../library/array_lib_1_to_15.js").findLowest;
+const findLowest = require("../../library/array_lib_1_to_15.js").findLowest;
 
 assert.equal(findLowest([2]),2);
 assert.equal(findLowest([1,2,3]),1);

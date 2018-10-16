@@ -1,5 +1,5 @@
 const assert = require("assert");
-const unionArrays = require("../library/array_lib_16_to_27.js").unionArrays;
+const unionArrays = require("../../library/array_lib_16_to_27.js").unionArrays;
 
 assert.deepEqual(unionArrays([2],[1]),[2,1]);
 assert.deepEqual(unionArrays([2,1],[3]),[2,1,3]);

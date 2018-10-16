@@ -1,5 +1,5 @@
 const assert = require("assert");
-const extractDigits = require("../library/array_lib_16_to_27.js").extractDigits;
+const extractDigits = require("../../library/array_lib_16_to_27.js").extractDigits;
 
 assert.deepEqual(extractDigits(2),[2]);
 assert.deepEqual(extractDigits(32),[3,2]);

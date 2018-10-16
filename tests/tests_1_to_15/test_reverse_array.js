@@ -1,5 +1,5 @@
 const assert = require("assert");
-const reverseArray = require("../library/array_lib_1_to_15.js").reverseArray;
+const reverseArray = require("../../library/array_lib_1_to_15.js").reverseArray;
 
 assert.deepEqual(reverseArray([1]), [1]);
 assert.deepEqual(reverseArray([1,2,3]), [3,2,1]);

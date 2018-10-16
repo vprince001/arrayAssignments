@@ -1,5 +1,5 @@
 const assert = require("assert");
-const extractUniqueFromFirst = require("../library/array_lib_16_to_27.js").extractUniqueFromFirst;
+const extractUniqueFromFirst = require("../../library/array_lib_16_to_27.js").extractUniqueFromFirst;
 
 assert.deepEqual(extractUniqueFromFirst([2],[1]),[2]);
 assert.deepEqual(extractUniqueFromFirst([2,1],[1]),[2]);

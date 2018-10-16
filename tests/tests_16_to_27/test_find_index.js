@@ -1,5 +1,5 @@
 const assert = require("assert");
-const findIndex = require("../library/array_lib_16_to_27.js").findIndex;
+const findIndex = require("../../library/array_lib_16_to_27.js").findIndex;
 
 assert.equal(findIndex([2],2),0);
 assert.equal(findIndex([3,2],2),1);

@@ -1,5 +1,5 @@
 const assert = require("assert");
-const checkDescendingOrder = require("../library/array_lib_16_to_27.js").checkDescendingOrder;
+const checkDescendingOrder = require("../../library/array_lib_16_to_27.js").checkDescendingOrder;
 
 assert.equal(checkDescendingOrder([2]),true);
 assert.equal(checkDescendingOrder([2,1]),true);

@@ -1,5 +1,5 @@
 const assert = require("assert");
-const removeDuplicates = require("../library/array_lib_16_to_27.js").removeDuplicates;
+const removeDuplicates = require("../../library/array_lib_16_to_27.js").removeDuplicates;
 
 assert.deepEqual(removeDuplicates([2]),[2]);
 assert.deepEqual(removeDuplicates([3,2]),[3,2]);

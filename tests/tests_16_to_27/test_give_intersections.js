@@ -1,5 +1,5 @@
 const assert = require("assert");
-const giveIntersections = require("../library/array_lib_16_to_27.js").giveIntersections;
+const giveIntersections = require("../../library/array_lib_16_to_27.js").giveIntersections;
 
 assert.deepEqual(giveIntersections([2],[2]),[2]);
 assert.deepEqual(giveIntersections([2,1],[1]),[1]);

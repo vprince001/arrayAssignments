@@ -1,5 +1,5 @@
 const assert = require("assert");
-const zipTwoArrays = require("../library/array_lib_16_to_27.js").zipTwoArrays;
+const zipTwoArrays = require("../../library/array_lib_16_to_27.js").zipTwoArrays;
 
 assert.deepEqual(zipTwoArrays([2],[2]),[ [2,2] ]);
 assert.deepEqual(zipTwoArrays([2,1],[1,2]),[ [2,1],[1,2] ]);

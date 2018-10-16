@@ -1,5 +1,5 @@
 const assert = require("assert");
-const partitionArray = require("../library/array_lib_16_to_27.js").partitionArray;
+const partitionArray = require("../../library/array_lib_16_to_27.js").partitionArray;
 
 assert.deepEqual(partitionArray([1,2,3],2), [ [1,2],[3] ] );
 assert.deepEqual(partitionArray([1,2,3,4,5],3), [ [1,2,3],[4,5] ] );
