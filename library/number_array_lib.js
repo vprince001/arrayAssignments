@@ -1,3 +1,5 @@
+let {reverseArray} = require("./general_array_lib.js");
+
 /* this function will check that 
  * given number is odd or not */
 const isNumberOdd = function(number){
@@ -49,33 +51,6 @@ const sumAllElements = function(inputArray){
   return sum;
 }
 
-/* this function will return a reverse array
- * from a given array */
-const reverseArray = function(inputArray){
-  let reversedArray = [];
-  let index = (inputArray.length) - 1;
-
-  for(let element of inputArray){
-    reversedArray[index] = element;
-    index--;
-  }
-  return reversedArray;
-}
-
-/* this function will return an array of 
- * all alternate elements from a given array */
-const extractAlternateElements = function(inputArray){
-  let filteredArray = [];
-  let filteredArrayIndex = 0;
-
-  for(let index = 0; index < inputArray.length; index++){
-    filteredArray[filteredArrayIndex] = inputArray[index];
-    filteredArrayIndex++;
-    index++;
-  }
-  return filteredArray;
-}
-
 /* this function will return an array consisting 
  * a reverse fibonacci series till a given limit */
 const reverseFibo = function(limit){
@@ -123,14 +98,15 @@ const calcAverage = function(inputArray){
   return average.toFixed(2);
 }
 
-/* this array will return an array of 
-   length of all elements from a given array */
-const mapLengths = function(inputArray){
-  let mappedArray = [];
-  for(index in inputArray){
-    mappedArray[index] = inputArray[index].length;
+/* this function will check if first number 
+ * is greater than second number or not. */
+const isNumberGreater = function(firstNumber, secondNumber){
+  isGreater = false;
+
+  if(firstNumber > secondNumber){
+    isGreater = true;
   }
-  return mappedArray;
+  return isGreater;
 }
 
 /* this array will return the count of
@@ -169,17 +145,15 @@ const countNumbersBelow = function(inputArray,threshold){
   return count;
 }
 
-// exporting all functions
+
+//exporting all functions
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
-exports.reverseArray = reverseArray;
-exports.extractAlternateElements = extractAlternateElements;
 exports.reverseFibo = reverseFibo;
 exports.findGreatest = findGreatest;
 exports.findLowest = findLowest;
 exports.calcAverage = calcAverage;
-exports.mapLengths = mapLengths;
 exports.countOdds = countOdds;
 exports.countEvens = countEvens;
 exports.countNumbersAbove = countNumbersAbove;

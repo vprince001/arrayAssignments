@@ -1,5 +1,5 @@
 const assert = require("assert");
-const countNumbersAbove = require("../../library/array_lib_1_to_15.js").countNumbersAbove;
+const {countNumbersAbove} = require("../../library/number_array_lib.js");
 
 assert.equal(countNumbersAbove([2],2),0);
 assert.equal(countNumbersAbove([1,2,3],2),1);

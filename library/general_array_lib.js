@@ -1,5 +1,41 @@
-// importing function from other library
-const findLowest = require("./array_lib_1_to_15").findLowest;
+/* this function will return a reverse array
+ * from a given array */
+const reverseArray = function(inputArray){
+  let reversedArray = [];
+  let index = (inputArray.length) - 1;
+
+  for(let element of inputArray){
+    reversedArray[index] = element;
+    index--;
+  }
+  return reversedArray;
+}
+
+/* this function will return an array of 
+ * all alternate elements from a given array */
+const extractAlternateElements = function(inputArray){
+  let filteredArray = [];
+  let filteredArrayIndex = 0;
+
+  for(let index = 0; index < inputArray.length; index++){
+    filteredArray[filteredArrayIndex] = inputArray[index];
+    filteredArrayIndex++;
+    index++;
+  }
+  return filteredArray;
+}
+
+/* this array will return an array of 
+   length of all elements from a given array */
+const mapLengths = function(inputArray){
+  let mappedArray = [];
+  let element;
+  for(index in inputArray){
+    element = inputArray[index].toString();
+    mappedArray[index] = element.length;
+  }
+  return mappedArray;
+}
 
 /* this function will return the index 
  * of a given number from a given array */
@@ -9,17 +45,7 @@ const findIndex = function(inputArray,number){
       return index;
     }
   }
-  return "no match found"
-}
-
-/* this function will check if first number 
- * is greater than second number or not. */
-const isNumberGreater = function(firstNumber, secondNumber){
-  isGreater = false;
-  if(firstNumber > secondNumber){
-    isGreater = true;
-  }
-  return isGreater;
+  return -1;
 }
 
 /* this function will check whether a given array 
@@ -44,25 +70,25 @@ const checkDescendingOrder = function(inputArray){
   return true;
 }
 
-/* this function will seperate all digits 
- * of a given number with a comma and return an array */
-const extractDigits = function(number){
-  let numberString = number.toString();
-  let numbers = numberString.split('');
-  return numbers;
+/* this function will seperate all characters 
+ * of a given element with a comma and return an array */
+const extractAllChars = function(element){
+  let elementString = element.toString();
+  let elements = elementString.split('');
+  return elements;
 }
 
 /* this function will check whether an element 
  * exists in a given array or not */
 const isElementExist = function(uniqueArray, element){
-  let status = false;
+  let isExist = false;
 
   for(let index in uniqueArray){
     if(uniqueArray[index] == element){
-      status = true;
+      isExist = true;
     }
   }
-  return status;
+  return isExist;
 }
 
 /* this function will remove all duplicate elements 
@@ -86,8 +112,9 @@ const unionArrays = function(firstArray, secondArray){
 
 /* this function will take two array as arguments, remove duplicates and 
  * return an array of all matching elements from the two arrays */
-const giveIntersections = function(firstArray,secondArray){
+const extractIntersections = function(firstArray,secondArray){
   let firstUnique = removeDuplicates(firstArray);
+  exports.sortInAscending = sortInAscending;
   let secondUnique = removeDuplicates(secondArray);
   let intersectedArray = [];
   
@@ -115,7 +142,7 @@ const extractUniqueFromFirst = function(firstArray, secondArray){
 }
 
 /* this function will take two array as arguments 
- * and check whecther second array is a subset of first array of not */
+ * and check whether second array is a subset of first array of not */
 const isArraySubset = function(firstArray, secondArray){
   let sameElements = 0;
   let isSubset = false;
@@ -150,16 +177,18 @@ const zipTwoArrays = function(firstArray, secondArray) {
 
 /* this function will retun an array 
  * rotated from a given number from a given array */
-const rotateArray = function(inputArray, firstMatch) {
+const rotateArray = function(inputArray, element) {
   let rotatedArray = [];
   let count = 0;
+  let startIndex = findIndex(inputArray,element);
+  startIndex++;
 
-  for (let index = firstMatch; index < inputArray.length; index++) {
+  for (let index = startIndex; index < inputArray.length; index++) {
     rotatedArray[count] = inputArray[index];
     count++;
   }
 
-  for (let index = 0; index < firstMatch; index++) {
+  for (let index = 0; index < startIndex; index++) {
     rotatedArray[count] = inputArray[index];
     count++;
   }
@@ -168,7 +197,7 @@ const rotateArray = function(inputArray, firstMatch) {
 
 /* this function will swap number of given 
  * index to the end of all smaller numbers from a given array */
-const swapElements = function(inputArray, index) {
+const sortTwoElements = function(inputArray, index) {
   if(inputArray[index] > inputArray[index+1]){
     let greaterValue = inputArray[index];
     inputArray[index] = inputArray[index+1];
@@ -183,7 +212,7 @@ const sortInAscending = function(inputArray) {
 
   for(iteration = 0; iteration < inputArray.length; iteration++){
     for(let index = 0; index < inputArray.length; index++) {
-      swapElements(inputArray, index)
+      sortTwoElements(inputArray, index)
     }
   }
   return inputArray;
@@ -191,13 +220,13 @@ const sortInAscending = function(inputArray) {
 
 /* this function will return an array 
  * after dividing a given array in two arrays from the selected value */
-const partitionArray = function(inputArray, selectedValue) {
+const partitionArray = function(inputArray, partitionElement) {
   let partitionedArray = [[], []];
   sortInAscending(inputArray);
 
   for(let index in inputArray) {
     partitionedArray[1].push(inputArray[index]);
-    if(selectedValue >= inputArray[index]) {
+    if(partitionElement >= inputArray[index]) {
       partitionedArray[0].push(inputArray[index]);
       partitionedArray[1].pop();
     }
@@ -205,14 +234,18 @@ const partitionArray = function(inputArray, selectedValue) {
   return partitionedArray;
 }
 
-//exporting all functions
+// exporting all functions
+exports.reverseArray = reverseArray;
+exports.extractAlternateElements = extractAlternateElements;
+exports.mapLengths = mapLengths;
 exports.findIndex = findIndex;
 exports.checkAscendingOrder = checkAscendingOrder;
 exports.checkDescendingOrder = checkDescendingOrder;
-exports.extractDigits = extractDigits;
+exports.extractAllChars = extractAllChars;
+exports.isElementExist = isElementExist;
 exports.removeDuplicates = removeDuplicates;
 exports.unionArrays = unionArrays;
-exports.giveIntersections = giveIntersections;
+exports.extractIntersections = extractIntersections;
 exports.extractUniqueFromFirst = extractUniqueFromFirst;
 exports.isArraySubset = isArraySubset;
 exports.zipTwoArrays = zipTwoArrays;

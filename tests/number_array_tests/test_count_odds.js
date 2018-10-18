@@ -1,5 +1,5 @@
 const assert = require("assert");
-const countOdds = require("../../library/array_lib_1_to_15.js").countOdds;
+const {countOdds} = require("../../library/number_array_lib.js");
 
 assert.equal(countOdds([2]),0);
 assert.equal(countOdds([1,2,3]),2);

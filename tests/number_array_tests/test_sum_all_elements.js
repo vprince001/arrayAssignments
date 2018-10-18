@@ -1,5 +1,5 @@
 const assert = require("assert");
-const sumAllElements = require("../../library/array_lib_1_to_15.js").sumAllElements;
+const {sumAllElements} = require("../../library/number_array_lib.js");
 
 assert.deepEqual(sumAllElements([2]),2);
 assert.deepEqual(sumAllElements([1,2,3]),6);
