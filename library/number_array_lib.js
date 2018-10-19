@@ -3,7 +3,13 @@ let {reverseArray} = require("./general_array_lib.js");
 /* this function will check that 
  * given number is odd or not */
 const isOdd = function(number){
-  return Math.abs(number%2 == 1);
+  return (Math.abs(number)%2 == 1);
+}
+
+/* this function will check that 
+ * given number is odd or not */
+const isEven = function(number){
+  return (number%2 == 0);
 }
 
 /* this function will return an array of 
@@ -15,7 +21,7 @@ const extractOdds = function(inputArray){
 /* this function will return an array of 
  * all even numbers from a given array */
 const extractEvens = function(inputArray){
-  return evenArray.filter(!isOdd);
+  return inputArray.filter(isEven);
 }
 
 /* this function will return the sum of 
