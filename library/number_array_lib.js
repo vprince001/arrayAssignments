@@ -15,16 +15,7 @@ const extractOdds = function(inputArray){
 /* this function will return an array of 
  * all even numbers from a given array */
 const extractEvens = function(inputArray){
-  let evenArray = [];
-  let index = 0;
-
-  for(let element of inputArray){
-    if(!isNumberOdd(element)){
-      evenArray[index] = element;
-      index++;
-    }
-  }
-  return evenArray;
+  return evenArray.filter(!isOdd);
 }
 
 /* this function will return the sum of 
