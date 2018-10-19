@@ -75,17 +75,6 @@ const calcAverage = function(inputArray){
   return (sumAllElements(inputArray)/inputArray.length).toFixed(2);
 }
 
-/* this function will check if first number 
- * is greater than second number or not. */
-const isNumberGreater = function(firstNumber, secondNumber){
-  isGreater = false;
-
-  if(firstNumber > secondNumber){
-    isGreater = true;
-  }
-  return isGreater;
-}
-
 /* this array will return the count of
    all odd numbers from a given array */
 const countOdds = function(inputArray){
@@ -101,25 +90,19 @@ const countEvens = function(inputArray){
 /* this array will return the count of
    numbers above the given threshold from a given array */
 const countNumbersAbove = function(inputArray,threshold){
-  let count = 0;
-  for(let element of inputArray){
-    if(element > threshold){
-      count++;
-    }
-  }
-  return count;
+  let numbersAbove = inputArray.filter(function(a) {
+  return a > threshold;
+  });
+  return numbersAbove.length;
 }
 
 /* this array will return the count of
    numbers below the given threshold from a given array */
 const countNumbersBelow = function(inputArray,threshold){
-  let count = 0;
-  for(let element of inputArray){
-    if(element < threshold){
-      count++;
-    }
-  }
-  return count;
+  let numbersBelow = inputArray.filter(function(a) {
+  return a < threshold;
+  });
+  return numbersBelow.length;
 }
 
 
