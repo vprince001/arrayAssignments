@@ -7,7 +7,7 @@ const isOdd = function(number){
 }
 
 /* this function will check that 
- * given number is odd or not */
+ * given number is even or not */
 const isEven = function(number){
   return (number%2 == 0);
 }
@@ -25,14 +25,15 @@ const extractEvens = function(inputArray){
 }
 
 /* this function will return the sum of 
+ * two given numbers */
+const addTwoNumbers = function(firstNum,secondNum){
+  return firstNum + secondNum;
+}
+
+/* this function will return the sum of 
  * all numbers from a given array */
 const sumAllElements = function(inputArray){
-  let sum = 0;
-
-  for(let index = 0; index < inputArray.length; index++){
-    sum = sum + inputArray[index];
-  }
-  return sum;
+  return inputArray.reduce(addTwoNumbers);
 }
 
 /* this function will return an array consisting 
