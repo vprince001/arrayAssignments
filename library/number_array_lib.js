@@ -2,27 +2,14 @@ let {reverseArray} = require("./general_array_lib.js");
 
 /* this function will check that 
  * given number is odd or not */
-const isNumberOdd = function(number){
-  isOdd = false;
-  if(number%2 != 0){
-    isOdd = true;
-  }
-  return isOdd;
+const isOdd = function(number){
+  return Math.abs(number%2 == 1);
 }
 
 /* this function will return an array of 
  * all odd numbers from a given array */
 const extractOdds = function(inputArray){
-  let oddArray = [];
-  let index = 0;
-
-  for(let element of inputArray){
-    if(isNumberOdd(element)){
-      oddArray[index] = element;
-      index++;
-    }
-  }
-  return oddArray;
+  return inputArray.filter(isOdd);
 }
 
 /* this function will return an array of 

@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "@---General Array Tests---@"
 
-node ./general_array_tests/test_extract_alternate_elements.js
+node ./general_array_tests/test_extract_alternate_elements.js 
 echo "test_extract_alternate_elements passed"
 
 node ./general_array_tests/test_map_lengths.js
