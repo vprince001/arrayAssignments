@@ -17,10 +17,9 @@ const extractAlternateElements = function(inputArray){
   let filteredArray = [];
   let filteredArrayIndex = 0;
 
-  for(let index = 0; index < inputArray.length; index++){
+  for(let index = 0; index < inputArray.length; index += 2){
     filteredArray[filteredArrayIndex] = inputArray[index];
     filteredArrayIndex++;
-    index++;
   }
   return filteredArray;
 }
