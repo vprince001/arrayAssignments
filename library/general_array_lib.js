@@ -1,5 +1,3 @@
-/* this function will return a reverse array
- * from a given array */
 const reverseArray = function(input) {
   let reversedArray = [];
   let index = (input.length) - 1;
@@ -11,8 +9,6 @@ const reverseArray = function(input) {
   return reversedArray;
 };
 
-/* this function will return an array of 
- * all alternate elements from a given array */
 const extractAlternateElements = function(inputArray) {
   let filteredArray = [];
 
@@ -22,8 +18,6 @@ const extractAlternateElements = function(inputArray) {
   return filteredArray;
 };
 
-/* this array will return an array of 
-   length of all elements from a given array */
 const mapLengths = function(inputArray) {
   let mappedArray = [];
   let element;
@@ -34,8 +28,6 @@ const mapLengths = function(inputArray) {
   return mappedArray;
 };
 
-/* this function will return the index 
- * of a given number from a given array */
 const findIndex = function(inputArray,number) {
   for (let index in inputArray) {
     if (inputArray[index] == number) {
@@ -45,8 +37,6 @@ const findIndex = function(inputArray,number) {
   return -1;
 }
 
-/* this function will check whether a given array 
- * is ascending or not */
 const checkAscendingOrder = function(inputArray) {
   for (let index = 0; index < inputArray.length; index++) {
     if (inputArray[index] > inputArray[index+1]) {
@@ -56,8 +46,6 @@ const checkAscendingOrder = function(inputArray) {
   return true;
 };
 
-/* this function will check whether a given array 
- * is descending or not */
 const checkDescendingOrder = function(inputArray) {
   for (let index = 0; index < inputArray.length; index++) {
     if (inputArray[index] < inputArray[index+1]) {
@@ -67,16 +55,12 @@ const checkDescendingOrder = function(inputArray) {
   return true;
 }
 
-/* this function will seperate all characters 
- * of a given element with a comma and return an array */
 const extractAllChars = function(element) {
   let elementString = element.toString();
   let elements = elementString.split('');
   return elements;
 }
 
-/* this function will check whether an element 
- * exists in a given array or not */
 const isElementExist = function(uniqueArray, element) {
   let isExist = false;
 
@@ -88,8 +72,6 @@ const isElementExist = function(uniqueArray, element) {
   return isExist;
 }
 
-/* this function will remove all duplicate elements 
- * from a given array and return an array of all unique elements */
 const removeDuplicates = function(inputArray) {
   let uniqueArray = [];
 
@@ -101,14 +83,10 @@ const removeDuplicates = function(inputArray) {
   return uniqueArray;
 };
 
-/* this function will concatinate two given arrays 
- * and return a single concatinated array */
 const unionArrays = function(firstArray, secondArray) {
   return unionArray = removeDuplicates(firstArray.concat(secondArray));
 };
 
-/* this function will take two array as arguments, remove duplicates and 
- * return an array of all matching elements from the two arrays */
 const extractIntersections = function(firstArray,secondArray) {
   let firstUnique = removeDuplicates(firstArray);
   let secondUnique = removeDuplicates(secondArray);
@@ -122,8 +100,6 @@ const extractIntersections = function(firstArray,secondArray) {
   return intersectedArray;
 };
 
-/* this function will compare two given arrays 
- * and return all the unique elements from the first array */
 const subtractSet = function(firstArray, secondArray){
   let uniqueArray = [];
   let count = 0;
@@ -137,8 +113,6 @@ const subtractSet = function(firstArray, secondArray){
   return uniqueArray;
 };
 
-/* this function will take two array as arguments 
- * and check whether second array is a subset of first array of not */
 const isArraySubset = function(firstArray, secondArray) {
   let sameElements = 0;
   let isSubset = false;
@@ -154,8 +128,6 @@ const isArraySubset = function(firstArray, secondArray) {
   return isSubset;
 };
 
-/* this function will return a zip 
- * from two given arrays */
 const zipTwoArrays = function(firstArray, secondArray) {
   let zippedArray = [];
   let length = firstArray.length;
@@ -171,8 +143,6 @@ const zipTwoArrays = function(firstArray, secondArray) {
   return zippedArray;
 };
 
-/* this function will retun an array 
- * rotated from a given number from a given array */
 const rotateArray = function(input, startIndex) {
   for (let index = 0; index < startIndex; index++) {
     input.push(input.shift());
@@ -180,8 +150,6 @@ const rotateArray = function(input, startIndex) {
   return input;
 };
 
-/* this function will swap number of given 
- * index to the end of all smaller numbers from a given array */
 const sortTwoElements = function(inputArray, index) {
   if (inputArray[index] > inputArray[index+1]) {
     let greaterValue = inputArray[index];
@@ -191,8 +159,6 @@ const sortTwoElements = function(inputArray, index) {
   return inputArray;
 };
 
-/* this function will sort a given 
- * array in ascending order */
 const sortInAscending = function(inputArray) {
 
   for (iteration = 0; iteration < inputArray.length; iteration++) {
@@ -203,8 +169,6 @@ const sortInAscending = function(inputArray) {
   return inputArray;
 };
 
-/* this function will return an array 
- * after dividing a given array in two arrays from the selected value */
 const partitionArray = function(inputArray, partitionElement) {
   let partitionedArray = [[], []];
   sortInAscending(inputArray);
