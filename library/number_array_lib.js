@@ -2,43 +2,43 @@ let {reverseArray} = require("./general_array_lib.js");
 
 /* this function will check that 
  * given number is odd or not */
-const isOdd = function(number){
+const isOdd = function(number) {
   return (Math.abs(number)%2 == 1);
-}
+};
 
 /* this function will check that 
  * given number is even or not */
-const isEven = function(number){
+const isEven = function(number) {
   return (number%2 == 0);
-}
+};
 
 /* this function will return an array of 
  * all odd numbers from a given array */
-const extractOdds = function(inputArray){
+const extractOdds = function(inputArray) {
   return inputArray.filter(isOdd);
-}
+};
 
 /* this function will return an array of 
  * all even numbers from a given array */
-const extractEvens = function(inputArray){
+const extractEvens = function(inputArray) {
   return inputArray.filter(isEven);
-}
+};
 
 /* this function will return the sum of 
  * two given numbers */
-const addTwoNumbers = function(firstNum,secondNum){
+const addTwoNumbers = function(firstNum,secondNum) {
   return firstNum + secondNum;
-}
+};
 
 /* this function will return the sum of 
  * all numbers from a given array */
-const sumAllElements = function(inputArray){
+const sumAllElements = function(inputArray) {
   return inputArray.reduce(addTwoNumbers);
-}
+};
 
 /* this function will return an array consisting 
  * a reverse fibonacci series till a given limit */
-const reverseFibo = function(limit){
+const reverseFibo = function(limit) {
   let firstTerm = 0;
   let secondTerm = 1;
   let sum = firstTerm + secondTerm;
@@ -51,17 +51,12 @@ const reverseFibo = function(limit){
     secondTerm = sum;
   }
   return reverseArray(fibo);
-}
+};
 
 /* this function will return the greatest number
  * from a given array */
-const findGreatest = function(inputArray){
-  let greatestNumber = inputArray[0];
-
-  for(let index = 0; index < inputArray.length-1; index++){
-    greatestNumber = Math.max(greatestNumber, inputArray[index+1]);
-  }
-  return greatestNumber;
+const findGreatest = function(inputArray) {
+  return Math.max(inputArray);
 }
 
 /* this function will return the lowest number
