@@ -56,18 +56,13 @@ const reverseFibo = function(limit) {
 /* this function will return the greatest number
  * from a given array */
 const findGreatest = function(inputArray) {
-  return Math.max(inputArray);
+  return inputArray.reduce(function(a,b) {return Math.max(a,b)});
 }
 
 /* this function will return the lowest number
  * from a given array */
 const findLowest = function(inputArray){
-  let lowestNumber = inputArray[0];
-
-  for(let index = 0; index < inputArray.length-1; index++){
-    lowestNumber = Math.min(lowestNumber, inputArray[index+1]);
-  }
-  return lowestNumber;
+  return inputArray.reduce(function(a,b) {return Math.min(a,b)}); 
 }
 
 /* this array will calculate the average of
