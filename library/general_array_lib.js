@@ -15,11 +15,9 @@ const reverseArray = function(inputArray){
  * all alternate elements from a given array */
 const extractAlternateElements = function(inputArray){
   let filteredArray = [];
-  let filteredArrayIndex = 0;
 
   for(let index = 0; index < inputArray.length; index += 2){
-    filteredArray[filteredArrayIndex] = inputArray[index];
-    filteredArrayIndex++;
+    filteredArray[index/2] = inputArray[index];
   }
   return filteredArray;
 }
