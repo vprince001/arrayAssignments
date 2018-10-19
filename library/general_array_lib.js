@@ -173,22 +173,11 @@ const zipTwoArrays = function(firstArray, secondArray) {
 
 /* this function will retun an array 
  * rotated from a given number from a given array */
-const rotateArray = function(inputArray, element) {
-  let rotatedArray = [];
-  let count = 0;
-  let startIndex = findIndex(inputArray,element);
-  startIndex++;
-
-  for (let index = startIndex; index < inputArray.length; index++) {
-    rotatedArray[count] = inputArray[index];
-    count++;
-  }
-
+const rotateArray = function(input, startIndex) {
   for (let index = 0; index < startIndex; index++) {
-    rotatedArray[count] = inputArray[index];
-    count++;
+    input.push(input.shift());
   }
-  return rotatedArray;
+  return input;
 };
 
 /* this function will swap number of given 

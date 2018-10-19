@@ -6,4 +6,4 @@ assert.deepEqual(rotateArray([1,2,3,4,5],2),[3,4,5,1,2]);
 assert.deepEqual(rotateArray([3,2,4],2),[4,3,2]);
 assert.deepEqual(rotateArray([2,2,3,1,2],3),[1,2,2,2,3]);
 assert.deepEqual(rotateArray([1,2,3,4,1],1),[2,3,4,1,1]);
-assert.deepEqual(rotateArray(['This','is','the','best','code'],"is"),['the','best','code','This','is']);
+assert.deepEqual(rotateArray(['This','is','the','best','code'],2),['the','best','code','This','is']);

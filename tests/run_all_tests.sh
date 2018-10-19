@@ -19,7 +19,7 @@ echo "test_check_descending_order passed"
 node ./general_array_tests/test_extract_all_chars.js
 echo "test_extract_all_chars passed"
 
-node ./general_array_tests/test_extract_difference.js
+node ./general_array_tests/test_subtract_set.js
 echo "test_extract_difference passed"
 
 node ./general_array_tests/test_find_index.js
