@@ -2,6 +2,7 @@
 generalArrayDir="./general_array_tests/"
 generalArrayFiles=$(ls $generalArrayDir)
 
+set -e
 echo  +===============================+
 echo "|TESTING GENERAL ARRAY FUNCTIONS|"
 echo  +===============================+
@@ -9,13 +10,6 @@ echo  +===============================+
 for fileName in $generalArrayFiles
 do
   node $generalArrayDir/$fileName
-  
-  if [ $? != 0 ]
-  then
-    echo $fileName "failed"
-    exit
-  fi
-
   echo $fileName passed
   echo ------------------------------
 done
@@ -31,12 +25,6 @@ echo  +==============================+
 for fileName in $numberArrayFiles
 do
   node $numberArrayDir/$fileName
-  
-  if [ $? != 0 ]
-  then
-    echo $fileName failed
-    exit
-  fi
   echo $fileName passed
   echo ------------------------------
 done
