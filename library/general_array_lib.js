@@ -1,12 +1,5 @@
 const reverseArray = function(input) {
-  let reversedArray = [];
-  let index = (input.length) - 1;
-
-  for (let element of input){
-    reversedArray[index] = element;
-    index--;
-  }
-  return reversedArray;
+  return input.slice().reverse();
 };
 
 const extractAlternateElements = function(inputArray) {
