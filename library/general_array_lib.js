@@ -25,13 +25,16 @@ const findIndex = function(inputArray,element) {
   return inputArray.indexOf(element);
 };
 
-const checkAscendingOrder = function(inputArray) {
-  for (let index = 0; index < inputArray.length; index++) {
-    if (inputArray[index] > inputArray[index+1]) {
-      return false;
-    }
+const isAscending = function(list) {
+  const compare = function(previous,currentElement){
+    let {prevElement} = previous;
+    let {isAscending} = previous;
+    previous.isAscending = (prevElement <= currentElement) && isAscending;
+    previous.prevElement = currentElement;
+    return previous;
   }
-  return true;
+  let result = list.reduce(compare, {prevElement : list[0], isAscending : true});
+  return result.isAscending;
 };
 
 const checkDescendingOrder = function(inputArray) {
@@ -176,7 +179,7 @@ exports.reverseArray = reverseArray;
 exports.extractAlternateElements = extractAlternateElements;
 exports.mapLengths = mapLengths;
 exports.findIndex = findIndex;
-exports.checkAscendingOrder = checkAscendingOrder;
+exports.isAscending = isAscending;
 exports.checkDescendingOrder = checkDescendingOrder;
 exports.extractAllChars = extractAllChars;
 exports.isElementExist = isElementExist;
