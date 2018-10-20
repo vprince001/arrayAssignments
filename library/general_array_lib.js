@@ -14,15 +14,11 @@ const extractAlternateElements = function(inputArray) {
     return index%2 == 0;
   })
 };
-  
+
 const mapLengths = function(inputArray) {
-  let mappedArray = [];
-  let element;
-  for (index in inputArray) {
-    element = inputArray[index].toString();
-    mappedArray[index] = element.length;
-  }
-  return mappedArray;
+  return inputArray.map(function(element) {
+    return element.toString().length;
+  })
 };
 
 const findIndex = function(inputArray,number) {
