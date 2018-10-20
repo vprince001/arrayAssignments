@@ -10,14 +10,11 @@ const reverseArray = function(input) {
 };
 
 const extractAlternateElements = function(inputArray) {
-  let filteredArray = [];
-
-  for (let index = 0; index < inputArray.length; index += 2) {
-    filteredArray[index/2] = inputArray[index];
-  }
-  return filteredArray;
+  return inputArray.filter(function(element,index) { 
+    return index%2 == 0;
+  })
 };
-
+  
 const mapLengths = function(inputArray) {
   let mappedArray = [];
   let element;
