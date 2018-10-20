@@ -21,14 +21,9 @@ const mapLengths = function(inputArray) {
   })
 };
 
-const findIndex = function(inputArray,number) {
-  for (let index in inputArray) {
-    if (inputArray[index] == number) {
-      return index;
-    }
-  }
-  return -1;
-}
+const findIndex = function(inputArray,element) {
+  return inputArray.indexOf(element);
+};
 
 const checkAscendingOrder = function(inputArray) {
   for (let index = 0; index < inputArray.length; index++) {
