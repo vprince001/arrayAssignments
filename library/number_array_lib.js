@@ -82,10 +82,12 @@ exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
 exports.reverseFibo = reverseFibo;
+
 exports.findGreatest = findGreatest;
 exports.findLowest = findLowest;
 exports.calcAverage = calcAverage;
 exports.countOdds = countOdds;
+
 exports.countEvens = countEvens;
 exports.countNumbersAbove = countNumbersAbove;
 exports.countNumbersBelow = countNumbersBelow;

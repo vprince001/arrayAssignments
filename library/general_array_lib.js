@@ -25,25 +25,32 @@ const findIndex = function(inputArray,element) {
   return inputArray.indexOf(element);
 };
 
-const isAscending = function(list) {
+const isInSpecificOrder = function(list, comparator) {
   const compare = function(previous,currentElement){
     let {prevElement} = previous;
-    let {isAscending} = previous;
-    previous.isAscending = (prevElement <= currentElement) && isAscending;
+    let {isInOrder} = previous;
+    previous.isInOrder = (comparator(prevElement,currentElement)) && isInOrder;
     previous.prevElement = currentElement;
     return previous;
   }
-  let result = list.reduce(compare, {prevElement : list[0], isAscending : true});
-  return result.isAscending;
+  let result = list.reduce(compare, {prevElement : list[0], isInOrder : true});
+  return result.isInOrder;
 };
 
-const checkDescendingOrder = function(inputArray) {
-  for (let index = 0; index < inputArray.length; index++) {
-    if (inputArray[index] < inputArray[index+1]) {
-      return false;
-    }
-  }
-  return true;
+const isGreaterEqualTo = function(leftOperand, rightOperand){
+  return leftOperand >= rightOperand;
+}
+
+const isSmallerEqualTo = function(leftOperand, rightOperand){
+  return leftOperand <= rightOperand;
+}
+
+const isDescending = function(inputArray) {
+  return isInSpecificOrder(inputArray, isGreaterEqualTo);
+}
+
+const isAscending = function(inputArray) {
+  return isInSpecificOrder(inputArray, isSmallerEqualTo);
 }
 
 const extractAllChars = function(element) {
@@ -179,14 +186,17 @@ exports.reverseArray = reverseArray;
 exports.extractAlternateElements = extractAlternateElements;
 exports.mapLengths = mapLengths;
 exports.findIndex = findIndex;
+
 exports.isAscending = isAscending;
-exports.checkDescendingOrder = checkDescendingOrder;
+exports.isDescending = isDescending;
 exports.extractAllChars = extractAllChars;
 exports.isElementExist = isElementExist;
+
 exports.removeDuplicates = removeDuplicates;
 exports.unionArrays = unionArrays;
 exports.extractIntersections = extractIntersections;
 exports.subtractSet = subtractSet;
+
 exports.isArraySubset = isArraySubset;
 exports.zipTwoArrays = zipTwoArrays;
 exports.rotateArray = rotateArray;
