@@ -38,12 +38,12 @@ const isSmallerEqualTo = function(leftOperand, rightOperand){
   return leftOperand <= rightOperand;
 }
 
-const isDescending = function(inputArray) {
-  return isInSpecificOrder(inputArray, isGreaterEqualTo);
-}
-
 const isAscending = function(inputArray) {
   return isInSpecificOrder(inputArray, isSmallerEqualTo);
+}
+
+const isDescending = function(inputArray) {
+  return isInSpecificOrder(inputArray, isGreaterEqualTo);
 }
 
 const extractAllChars = function(element) {
@@ -189,5 +189,6 @@ exports.subtractSet = subtractSet;
 exports.isArraySubset = isArraySubset;
 exports.zipTwoArrays = zipTwoArrays;
 exports.rotateArray = rotateArray;
+exports.sortTwoElements = sortTwoElements;
 exports.sortInAscending = sortInAscending;
 exports.partitionArray = partitionArray;
