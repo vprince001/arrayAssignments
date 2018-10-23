@@ -173,6 +173,8 @@ exports.extractAlternateElements = extractAlternateElements;
 exports.mapLengths = mapLengths;
 exports.findIndex = findIndex;
 exports.isInSpecificOrder = isInSpecificOrder;
+exports.isGreaterEqualTo = isGreaterEqualTo;
+exports.isSmallerEqualTo = isSmallerEqualTo;
 
 exports.isAscending = isAscending;
 exports.isDescending = isDescending;
