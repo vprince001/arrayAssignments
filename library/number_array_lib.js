@@ -47,10 +47,12 @@ const findGreatest = function(inputArray) {
   return inputArray.reduce(findGreater);
 }
 
+const findLower = function(firstNum, secondNum) {
+  return Math.min(firstNum, secondNum);
+}
+
 const findLowest = function(inputArray){
-  return inputArray.reduce(function(firstNum,secondNum) {
-    return Math.min(firstNum,secondNum);
-  }); 
+  return inputArray.reduce(findLower);
 }
 
 const calcAverage = function(inputArray){
