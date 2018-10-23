@@ -53,14 +53,7 @@ const extractAllChars = function(element) {
 }
 
 const isElementExist = function(uniqueArray, element) {
-  let isExist = false;
-
-  for (let index in uniqueArray) {
-    if (uniqueArray[index] == element) {
-      isExist = true;
-    }
-  }
-  return isExist;
+  return uniqueArray.includes(element);
 }
 
 const removeDuplicates = function(inputArray) {
