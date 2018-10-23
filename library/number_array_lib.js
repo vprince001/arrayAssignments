@@ -68,17 +68,17 @@ const countEvens = function(inputArray){
 }
 
 const countNumbersAbove = function(inputArray,threshold){
-  let numbersAbove = inputArray.filter(function(number) {
-  return number > threshold;
-  });
-  return numbersAbove.length;
+  const extractGreaters = function(number) {
+    return number > threshold;
+  }
+  return inputArray.filter(extractGreaters).length;
 }
 
 const countNumbersBelow = function(inputArray,threshold){
-  let numbersBelow = inputArray.filter(function(number) {
-  return number < threshold;
-  });
-  return numbersBelow.length;
+  const extractLowers = function(number) {
+    return number < threshold;
+  }
+  return inputArray.filter(extractLowers).length;
 }
 
 //exporting all functions
