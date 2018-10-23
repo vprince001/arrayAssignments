@@ -172,6 +172,7 @@ exports.reverseArray = reverseArray;
 exports.extractAlternateElements = extractAlternateElements;
 exports.mapLengths = mapLengths;
 exports.findIndex = findIndex;
+exports.isInSpecificOrder = isInSpecificOrder;
 
 exports.isAscending = isAscending;
 exports.isDescending = isDescending;

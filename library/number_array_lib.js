@@ -82,6 +82,7 @@ const countNumbersBelow = function(inputArray,threshold){
 }
 
 //exporting all functions
+exports.isOdd = isOdd;
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
 exports.sumAllElements = sumAllElements;
