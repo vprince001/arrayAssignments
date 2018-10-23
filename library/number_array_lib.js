@@ -90,7 +90,9 @@ exports.addTwoNumbers = addTwoNumbers;
 exports.sumAllElements = sumAllElements;
 exports.reverseFibo = reverseFibo;
 
+exports.findGreater = findGreater;
 exports.findGreatest = findGreatest;
+exports.findLower = findLower;
 exports.findLowest = findLowest;
 exports.calcAverage = calcAverage;
 exports.countOdds = countOdds;
