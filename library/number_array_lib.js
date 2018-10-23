@@ -86,6 +86,7 @@ exports.isOdd = isOdd;
 exports.isEven = isEven;
 exports.extractOdds = extractOdds;
 exports.extractEvens = extractEvens;
+exports.addTwoNumbers = addTwoNumbers;
 exports.sumAllElements = sumAllElements;
 exports.reverseFibo = reverseFibo;
 
