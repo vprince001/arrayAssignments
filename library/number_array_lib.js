@@ -39,10 +39,12 @@ const reverseFibo = function(limit) {
   return reverseArray(fibo);
 };
 
+const findGreater = function(firstNum, secondNum) {
+  return Math.max(firstNum, secondNum);
+}
+
 const findGreatest = function(inputArray) {
-  return inputArray.reduce(function(firstNum,secondNum) {
-    return Math.max(firstNum,secondNum);
-  });
+  return inputArray.reduce(findGreater);
 }
 
 const findLowest = function(inputArray){
