@@ -2,6 +2,7 @@ const reverseArray = function(input) {
   return input.slice().reverse();
 };
 
+
 const extractAlternateElements = function(inputArray) {
   return inputArray.filter(function(element,index) { 
     return index%2 == 0;
