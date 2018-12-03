@@ -171,17 +171,19 @@ const partitionArray = function(inputArray, partitionElement) {
 exports.reverseArray = reverseArray;
 exports.extractAlternateElements = extractAlternateElements;
 exports.mapLengths = mapLengths;
+
 exports.findIndex = findIndex;
 exports.isInSpecificOrder = isInSpecificOrder;
 exports.isGreaterEqualTo = isGreaterEqualTo;
-exports.isSmallerEqualTo = isSmallerEqualTo;
 
+exports.isSmallerEqualTo = isSmallerEqualTo;
 exports.isAscending = isAscending;
 exports.isDescending = isDescending;
+
 exports.extractAllChars = extractAllChars;
 exports.isElementExist = isElementExist;
-
 exports.removeDuplicates = removeDuplicates;
+
 exports.unionArrays = unionArrays;
 exports.extractIntersections = extractIntersections;
 exports.subtractSet = subtractSet;
@@ -189,6 +191,7 @@ exports.subtractSet = subtractSet;
 exports.isArraySubset = isArraySubset;
 exports.zipTwoArrays = zipTwoArrays;
 exports.rotateArray = rotateArray;
+
 exports.sortTwoElements = sortTwoElements;
 exports.sortInAscending = sortInAscending;
 exports.partitionArray = partitionArray;

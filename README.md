@@ -1,4 +1,4 @@
----------------------------------------------QUESTIONS---------------------------------------------
+![questions-banner](https://user-images.githubusercontent.com/16836599/49394245-5e3ce800-f759-11e8-9a88-a4853a998d67.png)
 
 1. Selecting odd numbers - Given a list of numbers, select the ones that are odd.
 
